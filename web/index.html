@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="ServletConsumidor" method="POST">
+           Inserción de contacto:
+           <label for="id_nombre">Nombre:</label><input type="text" name="nombre" id="id_nombre" placeholder="Introduzca el nombre">
+           <br>
+           <label for="id_email">Email:</label><input type="email" name="email" id="id_email" placeholder="Introduzca el email">
+           <input type="hidden" name="accion" value="insertar">
+           <input type="submit" value="insertar">
+        </form>
+        <form action="ServletConsumidor" method="POST">
+        Buscar por nombre:
+        <label for="id_nombre_buscado">Nombre:</label><input type="text" name="nombre" id="id_nombre_buscado" placeholder="Introduzca el nombre para buscar">
+        <input type="hidden" name="accion" value="buscar">
+        <input type="submit" value="Buscar">
+        </form>
+        <br>
+        <a href="ServletConsumidor?accion=listar">Listar</a>
+    </body>
+</html>
